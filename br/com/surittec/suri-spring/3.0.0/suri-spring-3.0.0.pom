@@ -1,0 +1,275 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>br.com.surittec</groupId>
+		<artifactId>suri-pom</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	
+	<artifactId>suri-spring</artifactId>
+	<version>3.0.0</version>
+	<packaging>pom</packaging>
+
+	<name>Suri Spring</name>
+	<url>http://surittec.com.br</url>
+	
+	<repositories>
+		<repository>
+			<id>suri-repo</id>
+			<name>Suri-Repo</name>
+			<url>https://github.com/Surittec/suri-repo/raw/master</url>
+		</repository>
+	</repositories>
+	
+	<dependencyManagement>
+		<dependencies>
+			
+			<!-- EAP BOM -->
+			
+			<dependency>
+				<groupId>br.com.surittec</groupId>
+				<artifactId>eap-bom</artifactId>
+				<version>${eap-bom.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			
+			<!-- JSF -->
+			
+			<dependency>
+			   <groupId>org.ocpsoft.rewrite</groupId>
+			   <artifactId>rewrite-integration-spring</artifactId>
+			   <version>${rewrite.version}</version>
+			   <scope>compile</scope>
+			</dependency>
+			
+			<!-- Spring -->
+			
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${spring.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${spring.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-tx</artifactId>
+				<version>${spring.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-orm</artifactId>
+				<version>${spring.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aop</artifactId>
+				<version>${spring.version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-core</artifactId>
+				<version>${spring-security.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-web</artifactId>
+				<version>${spring-security.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-config</artifactId>
+				<version>${spring-security.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjrt</artifactId>
+				<version>${aspectj.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjweaver</artifactId>
+				<version>${aspectj.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>cglib</groupId>
+				<artifactId>cglib</artifactId>
+				<version>${cglib.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			<!-- Suittec -->
+			
+			<dependency>
+				<groupId>br.com.surittec</groupId>
+				<artifactId>suri-util</artifactId>
+				<version>${suri-util.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>br.com.surittec</groupId>
+				<artifactId>suri-quartz</artifactId>
+				<version>${suri-quartz.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>br.com.surittec</groupId>
+				<artifactId>suri-jpa</artifactId>
+				<version>${suri-jpa.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>br.com.surittec</groupId>
+				<artifactId>suri-validation</artifactId>
+				<version>${suri-validation.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>br.com.surittec</groupId>
+				<artifactId>suri-faces</artifactId>
+				<version>${suri-faces.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			
+			<!-- Surittec SURI-SPRING -->
+			
+			<dependency>
+				<groupId>br.com.surittec</groupId>
+				<artifactId>suri-spring-core</artifactId>
+				<version>${project.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>br.com.surittec</groupId>
+				<artifactId>suri-spring-jpa</artifactId>
+				<version>${project.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>br.com.surittec</groupId>
+				<artifactId>suri-spring-faces</artifactId>
+				<version>${project.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>br.com.surittec</groupId>
+				<artifactId>suri-spring-security</artifactId>
+				<version>${project.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			
+		</dependencies>
+	</dependencyManagement>
+	
+	<modules>
+		<module>core</module>
+		<module>jpa</module>
+		<module>faces</module>
+		<module>security</module>
+	</modules>
+	
+	<dependencies>
+		
+		<!-- Spring -->
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+		</dependency>
+		
+		<!-- logging -->
+			
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		
+		<!-- junit -->
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		
+	</dependencies>
+	
+	<properties>
+ 		<eap-bom.version>6.3.2</eap-bom.version>
+ 		
+		<spring.version>3.2.13.RELEASE</spring.version>
+        <spring-security.version>3.2.7.RELEASE</spring-security.version>
+        <aspectj.version>1.7.4</aspectj.version>
+        <cglib.version>3.0</cglib.version>
+		
+		<rewrite.version>2.0.12.Final</rewrite.version>
+		
+		<suri-util.version>1.0.4</suri-util.version>
+		<suri-quartz.version>1.0.1</suri-quartz.version>
+		<suri-jpa.version>1.0.0</suri-jpa.version>
+		<suri-validation.version>1.0.0</suri-validation.version>
+		<suri-faces.version>1.0.0</suri-faces.version>
+	</properties>
+	
+</project>
